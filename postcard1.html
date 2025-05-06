@@ -31,15 +31,15 @@
      <img src="1.15.png" alt="Image 15">
    </div>
 
-   <div class="video-section">
-    <div class="video-section">
-      <iframe src="https://drive.google.com/file/d/1wvG598rCUdLOQs8L7OB3LiI3QVf2oQax/view?usp=sharing" width="1020" height="600" allow="autoplay"></iframe>
-      <br>
-      <!-- Optional: remove the button or add custom controls using JS + API if needed -->
-    </div>
-    <button class="button" onclick="playPause()">Play/Pause</button>
+   <div id="content" style="text-align:center;"> 
+    <button onclick="playPause()">Play/Pause</button> 
+    <br><br>
+    <video id="video1" width="1020">
+      <source src="final.mp4" type="video/mp4">
+      <source src="final.mp4" type="video/ogg">
+      Your browser does not support HTML video.
+    </video>
   </div>
-
   <script>
 
 function goAbout() {
