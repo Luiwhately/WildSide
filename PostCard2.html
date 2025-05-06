@@ -6,6 +6,11 @@
 </head>
 <body>
 
+  <!-- Top-left Home Button -->
+<button class="home-button" onclick="goHome()">Back to Homepage</button>
+
+<button class="about-button" onclick="goAbout()">About</button>
+
    <!-- Fixed image at the bottom -->
    <img src="fixed.jpg" alt="Fixed Image" class="fixed-image">
 
@@ -25,7 +30,7 @@
    </div>
 
   <div id="content" style="text-align:center;"> 
-    <button onclick="playPause()">Play/Pause</button> 
+    <button class="play-button" onclick="playPause()">Play/Pause</button> 
     <br><br>
     <video id="video1" width="1020">
       <source src="final.mp4" type="video/mp4">
@@ -33,9 +38,6 @@
       Your browser does not support HTML video.
     </video>
   </div>
-
-  <button onclick="goHome()">Back to Homepage</button>
-
   <script>
 
 const images = document.querySelectorAll('#gallery img');
@@ -75,6 +77,10 @@ const images = document.querySelectorAll('#gallery img');
     function goHome() {
       window.location.href = "homepage.html";
     }
+
+    function goAbout() {
+  window.location.href = "about.html";
+}
 
   </script>
 
