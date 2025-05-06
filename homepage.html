@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Wild side</title>
+  <link rel="stylesheet" href="wildsidehomepage.css">
+</head>
+<body>
+  <div class="menu-bar">
+    <a href="homepage.html">Home</a>
+    <a href="about.html">About</a>
+    </div>
+<br>
+  <div id="access-container">
+    <h2>Enter Access Code</h2>
+    <input type="password" id="code-input" placeholder="Enter code" />
+    <button onclick="checkCode()">Enter</button>
+    <p id="error-message"></p>
+  </div>
+  <audio id="bgAudio" autoplay>
+    <source src="nightsounds.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <div class="image-gallery" id="gallery">
+    <img src="1.png" alt="Image 1">
+    <img src="2.png" alt="Image 2">
+    <img src="3.png" alt="Image 3">
+    <img src="4.png" alt="Image 4">
+    <img src="5.png" alt="Image 5">
+    <img src="6.png" alt="Image 6">
+    <img src="7.png" alt="Image 7">
+    <img src="8.png" alt="Image 8">
+    <img src="9.png" alt="Image 9">
+    <img src="10.png" alt="Image 10">
+    <img src="11.png" alt="Image 11">
+    <img src="12.png" alt="Image 12">
+    <img src="13.png" alt="Image 13">
+    <img src="14.png" alt="Image 14">
+  </div>
+
+  <script>
+   const images = document.querySelectorAll('#gallery img');
+    const interval = 1500; // time between each image reveal (in ms)
+    let currentIndex = 0;
+
+    function revealNextImage() {
+      const img = images[currentIndex];
+
+      // Random position within the viewport
+      const x = Math.random() * (window.innerWidth - 160);
+      const y = Math.random() * (window.innerHeight - 160);
+      img.style.left = `${x}px`;
+      img.style.top = `${y}px`;
+
+      // Fade in
+      img.classList.add('visible');
+
+      // Optional: reset fade before next loop cycle
+      setTimeout(() => {
+        img.classList.remove('visible');
+      }, interval * images.length);
+
+      currentIndex++;
+
+      if (currentIndex >= images.length) {
+        currentIndex = 0;
+      }
+
+      setTimeout(revealNextImage, interval);
+    }
+
+    window.onload = revealNextImage;
+
+    function checkCode() {
+      const code = document.getElementById("code-input").value;
+      const errorMsg = document.getElementById("error-message");
+
+      const codeMap = {
+        "HurryUp!": "PostCard1.html",
+        "NoEnergy": "PostCard2.html",
+        "NotaLunch": "PostCard3.html",
+        "BabyBoss": "PostCard4.html",
+        "Surprise!": "PostCard5.html"
+      };
+
+      if (code in codeMap) {
+        window.location.href = codeMap[code];
+      } else {
+        errorMsg.textContent = "Incorrect code. Try again.";
+      }
+    }
+    window.addEventListener("load", () => {
+    const audio = document.getElementById("bgAudio");
+    audio.play().catch(e => {
+      console.log("Autoplay failed, maybe blocked by browser:", e);
+    });
+  });
+
+
+  </script>
+</body>
+</html>

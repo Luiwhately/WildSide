@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>About</title>
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+  <button class="home-button" onclick="goHome()">Back to Homepage</button>
+
+  <div class="container">
+    <header>
+      <h1>About This Project</h1>
+    </header>
+    <main>
+      <div class="content">
+        <p class="arial-black-text">Spending two months in South Africa changed the way I understand the world, and myself. It wasn’t just about the landscapes or the wildlife, though those were breathtaking. It was about the people. The rhythm of daily life. The language, the food, the rituals, the stories shared. The beauty is in the small moments: a conversation on a dirt road, a shared meal, a word you finally understand after hearing it enough times.<br>
+        
+            <br> This project is a reflection of that time, an invitation to leave your comfort zone and step into something unfamiliar. Participate in ecological projects in your neighborhood, go on a hike, learn a new language, listen to an elder, try something new. Because only when we are open to the world, can we really see it. True understanding doesn't come from looking. It comes from living.</p>
+    </div>
+    
+        <p class="encounter-light-text bottom">*A life where time goes by based on sun light.</p>
+        <p class="encounter-light-text right">*feets on the mud, hair went wild, nails never saw a manicure again</p>
+        <p class="encounter-light-text left">*The nature comes first, we come last. Observe, learn, change.</p>
+        <p class="encounter-light-text bottom-right">*The wild on us, live</p>
+        <p class="encounter-light-text bottom">*GET OUT of this screen!!!!!!</p>
+        <p class="encounter-light-text right">*Did you knonw that hyenas are a Matriarchal Society?</p>
+        <p class="encounter-light-text left">*This is the red text placed on the left side.</p>
+        <p class="encounter-light-text bottom-right">*Did you know that Genets are primarily nocturnal? This means, no sleep for me</p>
+     
+    </main>
+
+    <script>
+        function goHome() {
+          window.location.href = "homepage.html";
+        }
+      
+        function getRandomInt(min, max) {
+          return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+      
+        window.onload = function () {
+          const texts = document.querySelectorAll(".encounter-light-text");
+          let delay = 3000;
+      
+          texts.forEach((text, index) => {
+            setTimeout(() => {
+              text.style.opacity = "1"; 
+              moveWithFade(text);
+              setInterval(() => moveWithFade(text), 7000);
+            }, delay);
+            delay += 4000;
+          });
+      
+          function moveWithFade(el) {
+           
+            el.style.opacity = "0";
+      
+            setTimeout(() => {
+            
+              const maxX = window.innerWidth - el.offsetWidth;
+              const maxY = window.innerHeight - el.offsetHeight;
+              const randomX = getRandomInt(0, maxX);
+              const randomY = getRandomInt(0, maxY);
+              el.style.left = `${randomX}px`;
+              el.style.top = `${randomY}px`;
+      
+            
+              setTimeout(() => {
+                el.style.opacity = "1";
+              }, 4000); 
+            }, 7000); 
+          }
+        };
+      </script>
+</body>
+</html>

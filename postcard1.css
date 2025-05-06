@@ -1,0 +1,93 @@
+/* General styles */
+body {
+    background-color: black;
+    font-family: "Arial Black", Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  /* Floating images */
+  .image-gallery img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    pointer-events: none;
+    z-index: 2;
+  }
+  
+  .image-gallery img.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  /* Fixed image at bottom */
+  .fixed-image {
+    position: fixed;
+    bottom: 10px;
+    right: 600px;
+    width: 450px;
+    height: auto;
+    z-index: 10;
+  }
+  
+  /* Video and buttons section */
+  .video-section {
+    text-align: center;
+    margin-top: 100px;
+    z-index: 0;
+    position: relative;
+  }
+
+  .home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 20;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+
+  .button {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .about-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    font-family: "Arial Black", Arial, sans-serif;
+    font-weight: bold;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
