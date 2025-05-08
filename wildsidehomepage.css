@@ -55,3 +55,29 @@ body {
     opacity: 1;
     transform: scale(1);
   }
+
+  @media screen and (max-width: 600px) {
+    .menu-bar {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .menu-bar a {
+      margin: 10px;
+      font-size: 14px;
+    }
+  
+    #access-container {
+      padding: 15px;
+      width: 90%;
+      margin: 20px auto;
+    }
+  
+    input {
+      width: 90%;
+    }
+  
+    .image-gallery img {
+      width: 150px;
+    }
+  }

@@ -92,3 +92,30 @@ body {
 
   }
   
+  @media screen and (max-width: 600px) {
+    .home-button,
+    .about-button,
+    .play-button {
+      padding: 6px 10px;
+      font-size: 12px;
+    }
+  
+    .fixed-image {
+      right: 20px;
+      width: 250px;
+    }
+  
+    .play-button {
+      right: 50%;
+      transform: translateX(50%);
+      top: 70px;
+    }
+  
+    video {
+      width: 90vw;
+    }
+  
+    .image-gallery img {
+      width: 120px;
+    }
+  }

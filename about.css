@@ -5,74 +5,64 @@ body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    position: relative; /* Needed for absolute positioning of red texts */
-}
-
-header {
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  header {
     text-align: center;
-    padding: 20px 0;
-}
-
-main {
-    flex: 1;
+    padding: 20px 10px;
+  }
+  
+  main {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 60px;
-}
-
-.content {
-    text-align: center;
+    padding: 0 20px;
     position: relative;
-}
-
-.arial-black-text {
+    min-height: 80vh;
+    flex-direction: column;
+  }
+  
+  .content {
+    text-align: center;
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .arial-black-text {
     font-family: "Arial Black", Arial, sans-serif;
     font-weight: bold;
     color: white;
-    font-size: 1.5rem;
-    position: relative;
-    z-index: 1;
-    width: 600px;
+    font-size: 1.3rem;
+    width: 60%;
     text-align: justify;
-}
-
-.encounter-light-text {
-    font-family:monospace;
+    line-height: 1.5;
+    margin-left: 20%;
+  }
+  
+  .encounter-light-text {
+    font-family: monospace;
     font-weight: normal;
     color: red;
     font-size: 0.8rem;
-    margin: 0;
     position: absolute;
     opacity: 0;
     z-index: 0;
     display: flex;
     align-items: center;
     transition: top 0.8s ease, left 0.8s ease, opacity 0.8s ease;
-    width: 10%;
+    width: 120px;
+    max-width: 40vw;
     text-align: justify;
-    padding: 8px; /* add some space inside the box */
-  border: 1px solid red; /* this adds the red box around the text */
-  box-sizing: border-box;
-}
-
-
-/* Fade-in class added by JS */
-.fadeIn {
-    animation: fadeIn 2s ease-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-/* Home button styling */
-.home-button {
+    padding: 6px;
+    border: 1px solid red;
+    box-sizing: border-box;
+    word-wrap: break-word;
+  }
+  
+  /* Home button styling */
+  .home-button {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -84,5 +74,23 @@ main {
     border: none;
     padding: 8px 12px;
     cursor: pointer;
-}
-
+  }
+  
+  /* Responsive tweaks for iPhone 14 (390px width) */
+  @media screen and (max-width: 430px) {
+    .arial-black-text {
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  
+    .encounter-light-text {
+      font-size: 0.7rem;
+      width: 90px;
+      max-width: 40vw;
+    }
+  
+    .home-button {
+      padding: 6px 10px;
+      font-size: 0.9rem;
+    }
+  }

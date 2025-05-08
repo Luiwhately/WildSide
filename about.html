@@ -13,64 +13,76 @@
     </header>
     <main>
       <div class="content">
-        <p class="arial-black-text">Spending two months in South Africa changed the way I understand the world, and myself. It wasn’t just about the landscapes or the wildlife, though those were breathtaking. It was about the people. The rhythm of daily life. The language, the food, the rituals, the stories shared. The beauty is in the small moments: a conversation on a dirt road, a shared meal, a word you finally understand after hearing it enough times.<br>
-        
-            <br> This project is a reflection of that time, an invitation to leave your comfort zone and step into something unfamiliar. Participate in ecological projects in your neighborhood, go on a hike, learn a new language, listen to an elder, try something new. Because only when we are open to the world, can we really see it. True understanding doesn't come from looking. It comes from living.</p>
-    </div>
-    
-        <p class="encounter-light-text bottom">*A life where time goes by based on sun light.</p>
-        <p class="encounter-light-text right">*feets on the mud, hair went wild, nails never saw a manicure again</p>
-        <p class="encounter-light-text left">*The nature comes first, we come last. Observe, learn, change.</p>
-        <p class="encounter-light-text bottom-right">*The wild on us, live</p>
-        <p class="encounter-light-text bottom">*GET OUT of this screen!!!!!!</p>
-        <p class="encounter-light-text right">*Did you knonw that hyenas are a Matriarchal Society?</p>
-        <p class="encounter-light-text left">*This is the red text placed on the left side.</p>
-        <p class="encounter-light-text bottom-right">*Did you know that Genets are primarily nocturnal? This means, no sleep for me</p>
-     
-    </main>
+        <p class="arial-black-text">
+          Spending two months in South Africa changed the way I understand the world, and myself. It wasn’t just about the landscapes or the wildlife, though those were breathtaking. It was about the people. The rhythm of daily life. The language, the food, the rituals, the stories shared. The beauty is in the small moments: a conversation on a dirt road, a shared meal, a word you finally understand after hearing it enough times.
+          <br><br>
+          This project is a reflection of that time, an invitation to leave your comfort zone and step into something unfamiliar. Participate in ecological projects in your neighborhood, go on a hike, learn a new language, listen to an elder, try something new. Because only when we are open to the world, can we really see it. True understanding doesn't come from looking. It comes from living.
+        </p>
+      </div>
 
-    <script>
-        function goHome() {
-          window.location.href = "homepage.html";
-        }
-      
-        function getRandomInt(min, max) {
-          return Math.floor(Math.random() * (max - min + 1)) + min;
-        }
-      
-        window.onload = function () {
-          const texts = document.querySelectorAll(".encounter-light-text");
-          let delay = 3000;
-      
-          texts.forEach((text, index) => {
-            setTimeout(() => {
-              text.style.opacity = "1"; 
-              moveWithFade(text);
-              setInterval(() => moveWithFade(text), 7000);
-            }, delay);
-            delay += 4000;
-          });
-      
-          function moveWithFade(el) {
-           
-            el.style.opacity = "0";
-      
-            setTimeout(() => {
-            
-              const maxX = window.innerWidth - el.offsetWidth;
-              const maxY = window.innerHeight - el.offsetHeight;
-              const randomX = getRandomInt(0, maxX);
-              const randomY = getRandomInt(0, maxY);
-              el.style.left = `${randomX}px`;
-              el.style.top = `${randomY}px`;
-      
-            
-              setTimeout(() => {
-                el.style.opacity = "1";
-              }, 4000); 
-            }, 7000); 
-          }
-        };
-      </script>
+      <p class="encounter-light-text bottom">*A life where time goes by based on sun light.</p>
+      <p class="encounter-light-text right">*feets on the mud, hair went wild, nails never saw a manicure again</p>
+      <p class="encounter-light-text left">*The nature comes first, we come last. Observe, learn, change.</p>
+      <p class="encounter-light-text bottom-right">*The wild on us, live</p>
+      <p class="encounter-light-text bottom">*GET OUT of this screen!!!!!!</p>
+      <p class="encounter-light-text right">*Did you knonw that hyenas are a Matriarchal Society?</p>
+      <p class="encounter-light-text left">*This is the red text placed on the left side.</p>
+      <p class="encounter-light-text bottom-right">*Did you know that Genets are primarily nocturnal? This means, no sleep for me</p>
+      <p class="encounter-light-text bottom">*people structure their day based on the sun, temperature shifts, and cloud patterns</p>
+      <p class="encounter-light-text right">*"Tree of Life," the baobab can store up to 120,000 liters of water</p>
+      <p class="encounter-light-text left">*Hyenas females are larger and more aggressive than males..</p>
+      <p class="encounter-light-text bottom-right">*leopards drag their kills high into tree branches.</p>
+      <p class="encounter-light-text bottom">*"I speak Khosain"</p>
+      <p class="encounter-light-text right">* constellations are not just stars, they're animals, ancestors, and moral lessons</p>
+      <p class="encounter-light-text left">*Spending time in nature has been scientifically proven to reduce stress</p>
+      <p class="encounter-light-text bottom-right">*helps regulate body temperature by creating tiny air currents around the animal. The stripes can help them stay cooler in hot climates.</p>
+      <p class="encounter-light-text bottom">*Their skin beneath the fur is black, and their stripes are a result of a genetic variation, making each zebra's pattern unique.</p>
+      <p class="encounter-light-text right">* Giraffes' tongues are around 18-20 inches long</p>
+      <p class="encounter-light-text left">*Giraffes sleep less than most mammals, averaging just 4.6 hours of sleep per day. They can sleep standing up</p>
+  
+   
+    </main>
+  </div>
+
+  <script>
+    function goHome() {
+      window.location.href = "homepage.html";
+    }
+
+    function getRandomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    window.onload = function () {
+      const texts = document.querySelectorAll(".encounter-light-text");
+      let delay = 3000;
+
+      texts.forEach((text, index) => {
+        setTimeout(() => {
+          text.style.opacity = "1";
+          moveWithFade(text);
+          setInterval(() => moveWithFade(text), 7000);
+        }, delay);
+        delay += 4000;
+      });
+
+      function moveWithFade(el) {
+        el.style.opacity = "0";
+
+        setTimeout(() => {
+          const maxX = window.innerWidth - el.offsetWidth;
+          const maxY = window.innerHeight - el.offsetHeight;
+          const randomX = getRandomInt(0, maxX);
+          const randomY = getRandomInt(0, maxY);
+          el.style.left = `${randomX}px`;
+          el.style.top = `${randomY}px`;
+
+          setTimeout(() => {
+            el.style.opacity = "1";
+          }, 4000);
+        }, 7000);
+      }
+    };
+  </script>
 </body>
 </html>
